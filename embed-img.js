@@ -50,7 +50,7 @@ function embedImage(filename) {
     $(this).attr('src', 'data:image/'+ext+';base64,'+base64);
   });
 
-  return $.html();
+  return $.html({decodeEntities: false});
 }
 
 if(!program.args.length) { // No filename found
